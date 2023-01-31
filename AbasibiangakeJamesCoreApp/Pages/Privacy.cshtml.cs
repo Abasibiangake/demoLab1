@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿//using Microsoft.AspNetCore.Mvc;
+using System.Globalization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AbasibiangakeJamesCoreApp.Pages;
@@ -14,6 +15,8 @@ public class PrivacyModel : PageModel
 
     public void OnGet()
     {
+        string dateTime = DateTime.Now.ToString("d", new CultureInfo("en-US"));
+        ViewData["TimeStamp"] = dateTime;
     }
 }
 
